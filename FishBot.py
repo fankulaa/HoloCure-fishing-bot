@@ -60,7 +60,7 @@ def doFishing():
     #right = The RGB value of the pixel at (1726, 462) is (45, 235, 43)
     #space = The RGB value of the pixel at (1666, 432) is (174, 49, 208)
     while fishing:
-        pic = pyautogui.screenshot(region=(innerBauble,20,20)) #bauble region
+        pic = pyautogui.screenshot(region=(innerBauble[0],innerBauble[1],20,20)) #bauble region
         width, height = pic.size
 
         for x in range(0, width):
@@ -87,7 +87,7 @@ while True:
     time.sleep(0.1)
     while fishing == False:
         print('throwing rod')
-        pic = pyautogui.screenshot(region=(VShapeOrnament,2,2))
+        pic = pyautogui.screenshot(region=(VShapeOrnament[0],VShapeOrnament[1],2,2))
         width, height = pic.size
 
         for x in range(0, width):
@@ -109,7 +109,7 @@ while True:
         print("waiting for catch...")
         breakout = False
         
-        pic = pyautogui.screenshot(region=(confirmationButton,2,2))
+        pic = pyautogui.screenshot(region=(confirmationButton[0],confirmationButton[1],2,2))
         width, height = pic.size
         
         for x in range(0, width):
